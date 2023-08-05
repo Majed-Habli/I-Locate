@@ -28,5 +28,28 @@
 
 .container_description{
     width: 100%;
-    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 3rem;
+    margin-bottom: 6rem;
+}
+
+.container_description h1{
+    color: #434343;
+}
+
+.container_description span{
+    font-size: 28px;
+}
+
+ul li{
+    font-weight: 700;
+    line-height: 1.8rem;
+}
+
+ul>li:not(:first-child){
+    list-style-type: none;
+    font-weight: 500;
+    color: #434343;
 }
