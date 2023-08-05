@@ -21,6 +21,10 @@ const Login = () =>{
                         <label className="label">Password: </label>
                         <input value={password} onChange={ e=> setPassword(e.target.value) }/>
                     </div>
+                    <div className={styles.button}>
+                        <button >log in</button>  
+                        {/* onClick={gunctionname} */}
+                    </div>
                 </div>
             </div>
             <Footer/>
