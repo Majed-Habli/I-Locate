@@ -17,6 +17,13 @@
 }
 
 .row span{
-    font-size: 16px;
+    font-size: 14px;
     color: #9b9b9b;
+}
+
+.button{
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    border: 1px solid #9b9b9b;
+    cursor: pointer;
 }

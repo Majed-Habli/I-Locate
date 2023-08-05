@@ -20,7 +20,7 @@ export const Footer = () =>{
                     <span>ILocate@info.io</span>
                 </p>
             </div>
-            <div className={styles.button}></div>
+            <div className={styles.button}>Leave a review on yelp</div>
         </div>
     )
 }
