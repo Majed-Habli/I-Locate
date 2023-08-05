@@ -5,15 +5,22 @@ export const Footer = () =>{
     return(
         <div className={styles.footer}>
             <div className={styles.row}>
-                Address:<br/>
-                Lebanon, Beirut,BDD<br/>
-                Building 1442 "10th floor"
+                <p>Phone:<br/>
+                    <span>+961 675 211</span>
+                </p>
             </div>
             <div className={styles.row}>
-                Email:<br/> 
-                ILocate@info.io
+                <p>Address:<br/>
+                    <span>Lebanon, Beirut,BDD<br/>
+                    Building 1442 "10th floor"</span>
+                </p>
             </div>
-            <div className={styles.row}></div>
+            <div className={styles.row}>
+                <p>Email:<br/> 
+                    <span>ILocate@info.io</span>
+                </p>
+            </div>
+            <div className={styles.button}></div>
         </div>
     )
 }
