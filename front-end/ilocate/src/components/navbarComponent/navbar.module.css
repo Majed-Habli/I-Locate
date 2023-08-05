@@ -10,7 +10,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: transparent;
+    position: absolute;
     padding: 0 2rem;
+    z-index: 1;
 }
 
 .title_container{
