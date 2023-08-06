@@ -34,8 +34,6 @@ const Home = () =>{
     const viewMap = (longitude,latitude)=>{
         setLongitude(longitude);
         setLatitude(latitude);
-        // console.log(latitude);
-        // console.log(longitude);
     }
 
     const showPopUp=()=>{
