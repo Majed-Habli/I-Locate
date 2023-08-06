@@ -48,7 +48,13 @@ const Home = () =>{
             </div>
             <div className={styles.card_container}>
                 {contacts.map(contact=>(
-                <Card key={contact.id} contact={contact}  onClick={()=>viewMap({latitude:contact.latitude, longitude:contact.longitude})}></Card>
+                <Card
+                key={contact.id}
+                contact={contact}
+                onClick={() => {
+                viewMap(contact.longitude, contact.latitude);
+                }}
+            ></Card>
                 ))}
             </div>
             <div>
