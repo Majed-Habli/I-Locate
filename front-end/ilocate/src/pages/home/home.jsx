@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./home.module.css";
 import { Card } from "../../components/card_component/card";
 import { Map } from "../../components/map_component/map";
+import { AddContact } from "../../components/add_contact_component/add_contact";
 
 const Home = () =>{
     const [contacts, setContact] = useState([]);
@@ -44,7 +45,7 @@ const Home = () =>{
         <div className={styles.container}>
             <div className={styles.button}>
                 <img src="/add.png" alt="add image" onClick={showPopUp}/>
-                {/* {isPopUpVisible && } */}
+                {isPopUpVisible && <AddContact/>}
             </div>
             <div className={styles.card_container}>
                 {contacts.map(contact=>(

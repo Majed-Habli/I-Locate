@@ -1,0 +1,47 @@
+.body_container{
+    width: 100%;
+    padding: 6rem 9rem;
+}
+
+.input_container{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    border: 1px solid #afafaf;
+    border-radius: 4px;
+}
+
+.row{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    line-height: 0.6rem;
+    justify-content: space-between;
+}
+
+.row input{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+}
+
+.button button{
+    width: 110px;
+    height: 34px;
+    font-size: 16px;
+    border: 1px solid #afafaf;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button button:hover{
+    background-color: #dbdada;
+}

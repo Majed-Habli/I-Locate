@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./card.module.css";
+import styles from './add_contact.module.css';
 
 export const AddContact = () =>{
 
