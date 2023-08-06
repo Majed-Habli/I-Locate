@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./home.module.css";
-import { Footer } from "../../components/footerComponent/footer";
 
 const Home = () =>{
     return(
@@ -20,7 +19,6 @@ const Home = () =>{
                     </div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }
