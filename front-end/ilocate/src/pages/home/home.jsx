@@ -7,6 +7,7 @@ const Home = () =>{
     const [contacts, setContact] = useState([]);
     const [longitude, setLongitude] = useState('');
     const [latitude, setLatitude] = useState('');
+    const [isPopUpVisible, setPopUpVisible] = useState(false);
 
     useEffect(()=>{
         fetchContactData();
@@ -35,10 +36,15 @@ const Home = () =>{
         console.log(latitude);
         console.log(longitude);
     }
+
+    const showPopUp=()=>{
+        setPopUpVisible(true)
+    }
     return(
         <div className={styles.container}>
             <div className={styles.button}>
-                <img src="/add.png" alt="add image" />
+                <img src="/add.png" alt="add image" onClick={showPopUp}/>
+                {/* {isPopUpVisible && } */}
             </div>
             <div className={styles.card_container}>
                 {contacts.map(contact=>(
