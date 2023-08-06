@@ -1,24 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./home.module.css";
+import { Card } from "../../components/card_component/card";
+// import { Map } from "../../components/map_component/map";
 
 const Home = () =>{
+    const [contacts, setContact] = useState([]);
+    const [longitude, setLongitude] = useState('');
+    const [latitude, setLatitude] = useState('');
+
+    useEffect(()=>{
+        fetchContactData();
+    },[]);
+
+    const fetchContactData = async () => {
+        try{
+            const response = await fetch("http://localhost:8000/api/contacts",{
+            method:"GET",
+            });
+            const data = await response.json();
+            if(data.status === "successfully got the contact"){
+                setContact(data.data);
+            }else{
+                console.log("failed to set data")
+            }
+        }catch(error){
+            console.log("failed to call the api ",error);
+        }
+        
+    }
+
+    const viewMap = (longitude,latitude)=>{
+        setLongitude(longitude);
+        setLatitude(latitude)
+    }
     return(
         <div className={styles.container}>
-            <div className={styles.container_left}>
-                <img src="/hero-map.png" alt="" />
+            <div className={styles.button}>
+                <img src="/add.png" alt="add image" />
             </div>
-            <div className={styles.container_right}>
-                <div className={styles.container_description}>
-                    <h1>Interested in someone?<br/> <span>Let's find them !</span></h1>
-                    <div>
-                        <ul>
-                            <li className={styles.description_list}>Add</li>
-                            <li className={styles.description_list}>Remove</li>
-                            <li className={styles.description_list}>and look up the positions of people you hold dear.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div className={styles.card_container}>
+                {contacts.map(contact=>(
+                <Card key={contact.id} contact={contact}  onClick={()=>viewMap({latitude:contact.latitude, longitude:contact.longitude})}></Card>
+                ))}
             </div>
+            {/* <div>
+                <Map latitude_value={latitude} longitude_value={longitude}/>
+            </div> */}
+            
         </div>
     )
 }
