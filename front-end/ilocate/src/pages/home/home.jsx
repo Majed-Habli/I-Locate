@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./home.module.css";
 import { Card } from "../../components/card_component/card";
-// import { Map } from "../../components/map_component/map";
+import { Map } from "../../components/map_component/map";
 
 const Home = () =>{
     const [contacts, setContact] = useState([]);
@@ -31,7 +31,9 @@ const Home = () =>{
 
     const viewMap = (longitude,latitude)=>{
         setLongitude(longitude);
-        setLatitude(latitude)
+        setLatitude(latitude);
+        console.log(latitude);
+        console.log(longitude);
     }
     return(
         <div className={styles.container}>
@@ -43,9 +45,9 @@ const Home = () =>{
                 <Card key={contact.id} contact={contact}  onClick={()=>viewMap({latitude:contact.latitude, longitude:contact.longitude})}></Card>
                 ))}
             </div>
-            {/* <div>
+            <div>
                 <Map latitude_value={latitude} longitude_value={longitude}/>
-            </div> */}
+            </div>
             
         </div>
     )

@@ -1,6 +1,8 @@
 import React from 'react';
-import { MapContainer, TileLayer, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer,Marker, useMap } from 'react-leaflet'
 import styles from './map.module.css'
+import 'leaflet/dist/leaflet.css';
+
 
 export const Map = ({latitude_value, longitude_value}) =>{
     const Latitude = latitude_value;
@@ -14,11 +16,11 @@ export const Map = ({latitude_value, longitude_value}) =>{
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {/* <Marker position={{ lat: Latitude, lng: Longitude }}>
-                <Popup>
+            <Marker position={{ lat: Latitude, lng: Longitude }}>
+                {/* <Popup>
                     A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker> */}
+                </Popup> */}
+            </Marker>
         </MapContainer>
     )
 }
