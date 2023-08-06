@@ -41,8 +41,13 @@ const Home = () =>{
     }
     return(
         <div className={styles.container}>
-            <div className={styles.button}>
-                <img src="/add.png" alt="add image" onClick={showPopUp}/>
+            <div className={styles.header}>
+                <img src="/Logo.png" alt="" />
+                <div className={styles.log}>I-Locate</div>
+            </div>
+            <div className={styles.button} onClick={showPopUp}>
+                <img src="/add.png" alt="add image"/>
+                <div>Add Contacts</div>
             </div>
             <div className={styles.card_container}>
                 {contacts.map(contact=>(
@@ -59,7 +64,7 @@ const Home = () =>{
                 <Map latitude_value={latitude} longitude_value={longitude}/>
             </div>
             <div>
-                {isPopUpVisible && <AddContact/>}
+                {isPopUpVisible && <AddContact isPressed={setPopUpVisible}/>}
             </div>
             
         </div>

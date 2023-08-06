@@ -11,9 +11,6 @@ export const Card = ({contact,onClick}) =>{
                     <div>Longitude: {contact.longitude}</div>
                     <div>Latitude: {contact.latitude}</div>
                 </div>
-                {/* <div className={styles.button_container}>
-                    <button>Locate</button>
-                </div> */}
             </div>
         </div>
     )

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styles from './add_contact.module.css';
 
-export const AddContact = () =>{
+export const AddContact = ({isPressed}) =>{
 
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [latitude, setLatitude] = useState('');
     const [longitude, setLongitude] = useState('');
+    // const [isPressed, setIsPressed] = useState(isPressed);
 
 
     const AddContact = async () => {
@@ -29,6 +30,7 @@ export const AddContact = () =>{
             console.log(data);
             if(data.status === "success"){
                 console.log(data);
+                isPressed(prev => !prev)
             }else{
                 console.log("failed to set data")
             }
