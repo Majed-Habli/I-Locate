@@ -8,10 +8,6 @@ export const AddContact = () =>{
     const [latitude, setLatitude] = useState('');
     const [longitude, setLongitude] = useState('');
 
-    // useEffect(()=>{
-    //     AddContact();
-    // },[]);
-
     const AddContact = async () => {
         try{
             const body = {
@@ -29,6 +25,7 @@ export const AddContact = () =>{
                 body: parsebody
             });
             const data = await response.json();
+            console.log(data);
             if(data.status === "success"){
                 console.log(data);
             }else{
