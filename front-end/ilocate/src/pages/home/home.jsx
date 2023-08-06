@@ -45,7 +45,6 @@ const Home = () =>{
         <div className={styles.container}>
             <div className={styles.button}>
                 <img src="/add.png" alt="add image" onClick={showPopUp}/>
-                {isPopUpVisible && <AddContact/>}
             </div>
             <div className={styles.card_container}>
                 {contacts.map(contact=>(
@@ -54,6 +53,10 @@ const Home = () =>{
             </div>
             <div>
                 <Map latitude_value={latitude} longitude_value={longitude}/>
+            </div>
+            <div>
+                {isPopUpVisible && <AddContact/>}
+
             </div>
             
         </div>
