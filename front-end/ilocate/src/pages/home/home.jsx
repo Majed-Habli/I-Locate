@@ -39,6 +39,7 @@ const Home = () =>{
     const showPopUp=()=>{
         setPopUpVisible(true)
     }
+
     return(
         <div className={styles.container}>
             <div className={styles.header}>
@@ -55,9 +56,9 @@ const Home = () =>{
                 key={contact.id}
                 contact={contact}
                 onClick={() => {
-                viewMap(contact.longitude, contact.latitude);
+                    viewMap(contact.longitude, contact.latitude);
                 }}
-            ></Card>
+                ></Card>
                 ))}
             </div>
             <div>
